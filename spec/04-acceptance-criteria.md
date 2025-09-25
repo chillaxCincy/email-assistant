@@ -1,3 +1,5 @@
+## 04-acceptance-criteria.md
+
 Acceptance Criteria — Email Drafting (v1)
 
 Core Functional
@@ -19,9 +21,11 @@ Quality / Nonfunctional
 	•	Errors trigger retries with exponential backoff (1m → 4m → 15m → 60m, max 5).
 	•	On retry exhaustion, status set to error; no half-written drafts.
 	•	Logs redact PHI: student email local parts, phone numbers.
+	•	Logs are structured JSON with timestamps, status transitions, and redaction applied.
 	•	HTML sanitizer strips scripts, javascript: links, on* attributes.
 	•	All configuration lives in .env, secrets never committed.
 	•	Health endpoint reports DB + model readiness.
+	• Retry loop for Graph/LLM errors must stop after max 5 attempts (no infinite retries).
 
 Safety
 	•	Codebase contains no call to Graph /send.

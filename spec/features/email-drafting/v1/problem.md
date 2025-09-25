@@ -1,3 +1,5 @@
+## problem.md
+
 Problem — Email Drafting for Rotation Policies (v1)
 
 Context

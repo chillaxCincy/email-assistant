@@ -1,3 +1,5 @@
+## test-cases.md
+
 Test Cases — Email Drafting (v1)
 
 Note: All times UTC. All messages are new, non-draft, from the primary inbox. Unless stated, policy corpus contains Handbook v2, Policy Manual v1, CME PDF v1.
@@ -104,7 +106,7 @@ Body: I need to know what I have to do for this month.
 
 Expected:
 – Likely Bucket = Rotation Policy (LLM fallback)
-– Retrieval top1_similarity < 0.35 triggers explicit “Next steps” asking for specifics
+– Retrieval top1_similarity < 0.55 triggers explicit “Next steps” asking for specifics
 – At least 1 citation if any relevant snippet; otherwise still include “Source policy” with whatever closest section is found
 – Overall confidence < 0.55 → flagged low-confidence
 
@@ -165,9 +167,12 @@ Expected:
 – Bucket = Scheduling
 – In email_events logs: student email local part redacted (e.g., j***@student.university.edu); phone redacted or masked
 – Draft itself may echo contact info only if present in email; logs must be redacted
+
 Assertions:
-	1.	Stored body_plain_redacted does not contain full phone or full student email
-	2.	Categories and draft saved as usual
+    1. Stored body_plain_redacted does not contain full phone
+    2. Stored body_plain_redacted does not contain full student email (local part redacted)
+    3. Stored body_plain_redacted does not contain full student name (only initials or redacted form)
+    4. Categories and draft saved as usual
 
 ========================================
 TC-12 Idempotency (duplicate processing)

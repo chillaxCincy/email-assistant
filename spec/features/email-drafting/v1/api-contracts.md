@@ -1,3 +1,5 @@
+## api-contracts.md
+
 # API Contracts for Email Drafting (v1)
 
 ## RAG Service
@@ -24,7 +26,10 @@ Response:
 
 Notes:
 - Always include the "Source policy" line.
-- Add "Next steps" if evidence is weak.
+- Add "Next steps" if evidence is weak (overall confidence < 0.55).
+- confidence = min(top1_similarity, draft_self_score)
+  • top1_similarity: cosine similarity of the highest-scoring retrieved passage
+  • draft_self_score: model’s self-reported confidence in its draft (0–1)
 
 ---
 

@@ -1,3 +1,5 @@
+## nonfunctional-spec.md
+
 Nonfunctional Specification — Email Drafting (v1)
 
 Performance

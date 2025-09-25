@@ -1,3 +1,5 @@
+## functional-spec.md
+
 Functional Specification — Email Drafting (v1)
 
 Scope
@@ -40,7 +42,7 @@ Rotation Policy; CME & Attendance; Honorarium & W-9; Evaluations/Grades; Grand R
 Business Rules
 	•	Never invoke /send
 	•	Require at least one citation; aim for ≥2 when available
-	•	If top1_similarity < 0.35, include a Next steps line
+	•	If top1_similarity < 0.55, include a Next steps line
 	•	Redact PHI/PII in logs (student emails local-part, phone numbers)
 
 Configuration

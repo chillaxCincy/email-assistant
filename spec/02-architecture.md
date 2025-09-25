@@ -1,3 +1,4 @@
+## 02-architecture.md
 # Architecture (MVP)
 
 ## 1) Processes & Communication

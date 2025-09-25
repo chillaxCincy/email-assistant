@@ -1,3 +1,4 @@
+# 00-product-vision.md
 Product Vision — Email Assistant for Rotation Policies
 
 Vision

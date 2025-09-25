@@ -1,3 +1,5 @@
+## prompts.md
+
 # Prompts for Email Drafting (v1)
 
 ## Draft Generation Prompt
